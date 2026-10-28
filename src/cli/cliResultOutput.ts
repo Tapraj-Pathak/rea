@@ -752,6 +752,8 @@ const delimitedMetadata = (
     source_coverage: metadataValue("source_coverage") ?? null,
     source_complete: metadataValue("source_complete") ?? null,
     view: metadataValue("view") ?? null,
+    limitations: metadataValue("limitations") ?? null,
+    unknowns: metadataValue("unknowns") ?? null,
     provenance: projectOwnFields([
       "parent_evidence_id",
       "parent_operation",

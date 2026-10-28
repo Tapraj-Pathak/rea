@@ -19,13 +19,17 @@ const UNSUPPORTED_OUTPUT_COMBINATION_MESSAGE =
   "Token windows cannot preserve structured output. Remove --token-limit/--token-offset and use --filter-output or command pagination.";
 
 type StructuredOutputFormat = "json" | "jsonl" | "yaml";
-/** CLI formats, including REA-owned delimited formats adapted before Incur. */
-export const CLI_OUTPUT_FORMATS = [
+/** Formats that render a complete document, including target-free commands. */
+export const CLI_DOCUMENT_OUTPUT_FORMATS = [
   "toon",
   "json",
   "yaml",
   "md",
   "jsonl",
+] as const;
+/** Delimited formats require an explicitly selected row collection. */
+export const CLI_OUTPUT_FORMATS = [
+  ...CLI_DOCUMENT_OUTPUT_FORMATS,
   "csv",
   "tsv",
 ] as const;

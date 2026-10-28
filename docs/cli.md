@@ -982,7 +982,7 @@ rea inspect-analysis-view request.json --format csv \
 ```
 
 The first line is a REA metadata record,
-`# rea-delimited-v1 <JSON>`. It carries the selected path, view request,
+`# rea-delimited-v1 <JSON>`. It carries the selected path, view request, limitations and unknowns,
 coverage, source coverage and completeness, command, and duration. A metadata
 value of `null` means that the selected row collection did not provide that
 fact; it does not mean complete coverage. The following line is the header.
